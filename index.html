@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio Bárbara Trabert</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header data-bs-theme="dark">
+      <div class="collapse text-bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4>Sobre mí</h4>
+              <p class="text-body-secondary">
+                Soy diseñadora integral formada en la Pontificia Universidad Católica de Chile, con especial interés en branding y diseño editorial. Mi enfoque combina pensamiento estratégico, sensibilidad estética y una profunda comprensión del contexto cultural y comunicacional de cada proyecto.
+              </p>
+
+              <p class="text-body-secondary">
+                Me motiva crear soluciones visuales que conecten con las personas y potencien el valor de marcas, instituciones y publicaciones. Trabajo desde una mirada interdisciplinaria, integrando investigación, diseño centrado en el usuario y exploración material para generar propuestas coherentes, inclusivas y memorables.
+              </p>
+            </div>
+
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4>Habilidades</h4>
+              <table id="aqui" class="table table-hover table-borderless"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="me-2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+              ></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <strong>Portafolio</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section
+        class="py-5 text-center container"
+        style="background-size: cover; background-position: center;"
+      >
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Bárbara Trabert Sims</h1>
+            <p class="lead text-body-secondary">
+              Portafolio Diseño Integral <br />2021–2025
+            </p>
+            <p>
+              <a
+                href="#"
+                class="btn my-2"
+                style="background-color: #b9d9eb; border: none; color: black;"
+                >Página principal</a
+              >
+              <a href="#" class="btn btn-secondary my-2">Más información</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galería de proyectos -->
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+            id="popote"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Gráfico Chart.js -->
+      <section class="container text-center my-5">
+        <h3 class="mb-4">Distribución de Tipos de Proyectos</h3>
+        <canvas id="graficoProyectos" width="400" height="200"></canvas>
+      </section>
+
+      <!-- Testimonio -->
+      <section class="bg-dark py-5 text-center text-white" data-aos="zoom-in">
+        <div class="container">
+          <blockquote class="blockquote">
+            <p class="mb-4 fst-italic">
+              “Bárbara destaca por su mirada crítica, sensibilidad visual y compromiso con el impacto de sus proyectos.”
+            </p>
+            <footer class="blockquote-footer text-white-50">
+              Profesora Paz Cox de Diseño UC
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-body-secondary py-5">
+      <div class="container text-center">
+        <p class="float-end mb-1">
+          <a href="#" style="color: #b9d9eb;">Volver</a>
+        </p>
+        <small>@Bárbara Trabert Sims</small><br />
+        <small>
+          <a
+            href="https://github.com/Ayleenba23"
+            class="text-white"
+            >Desarrollado por Ayleen Bahamóndez</a
+          >
+        </small>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Código de habilidades -->
+    <script>
+      const habilidades = [
+        { programa: "Photoshop", valor: "50" },
+        { programa: "Illustrator", valor: "85" },
+        { programa: "InDesign", valor: "40" },
+        { programa: "Blender", valor: "5" },
+      ];
+
+      const donde = document.querySelector("#aqui");
+      habilidades.forEach((h) => {
+        donde.innerHTML += `
+          <tr>
+            <td class="w-25">${h.programa}</td>
+            <td>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10">
+                <rect width="${h.valor}" height="6" fill="#b9d9eb" rx="2" />
+              </svg>
+            </td>
+          </tr>`;
+      });
+    </script>
+
+    <!-- Script para gráfico -->
+    <script>
+      const ctx = document.getElementById("graficoProyectos");
+      new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Branding", "Diseño Editorial", "Packaging", "UX/UI", "Fotografía"],
+          datasets: [
+            {
+              label: "Proyectos realizados",
+              data: [35, 25, 20, 10, 10],
+              backgroundColor: ["#b9d9eb", "#99c3d4", "#7aaac2", "#5e91af", "#447e9d"],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: "bottom" },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
